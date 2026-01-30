@@ -35,12 +35,16 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, onComplete }) => {
 
   if (!timeLeft) {
     return (
-      <div className="flex flex-col items-center justify-center space-y-4 animate-fade-in-up">
-        <div className="p-4 bg-emerald-100 rounded-full text-emerald-600">
-           <Timer size={48} />
+      <div className="flex flex-col items-center justify-center space-y-4 animate-fade-in-up py-8">
+        <div className="p-5 bg-white rounded-full text-emerald-600 shadow-xl mb-2 transform hover:scale-110 transition-transform">
+           <Timer size={56} />
         </div>
-        <h2 className="text-2xl font-bold text-emerald-900">Pengumuman Telah Dibuka</h2>
-        <p className="text-emerald-700">Silakan cek status kelulusan Anda di bawah.</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center drop-shadow-md tracking-tight">
+          Pengumuman Telah Dibuka
+        </h2>
+        <p className="text-emerald-100 text-lg md:text-xl text-center font-medium max-w-lg">
+          Silakan cek status kelulusan Anda pada formulir di bawah ini.
+        </p>
       </div>
     );
   }
